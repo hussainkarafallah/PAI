@@ -6,7 +6,7 @@ g++ main.cpp -o out
 ```
 Works pretty much for windows and ubuntu (no c++11 or dependencies)
 
-Works upto 4x4 unfortunately (but at least it's correct minimax not trap or random thing)
+Works upto 4x4 unfortunately (but at least it's correct minimax not something random which probably doesn't make sense even if it works for higher grids)
 
 You need to wait 1 minute before it tells start the simulation.
 ## Game Rules / Self assumptions:
@@ -33,7 +33,7 @@ is considered a cycle of length 3
 * Exploring only up to limited depth from current state:
     * Now I believe this won't work because of the nature of the game. A friend suggested this idea (till a depth where number of options become reasonable) and then returning the move which would get the best score up to that depth. Because of the nature of the game, in order to make a difference in score you would need about 6 moves in order to make a difference in score, otherwise it would be the same score and basically random simulation. 
 
-## Some optimizations which I believe work really well:
+## Some optimizations which are ideal in theory:
 
 * Cutting isomorphic boards:
     * If you have an empty board and place a token anywhere in the middle. It doesn't matter wherever you place it as long as it's somewhere aroudn in the middle.

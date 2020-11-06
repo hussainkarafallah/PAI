@@ -283,7 +283,7 @@ public:
                 grid[r][c] = CELL_STATE::FREE;
             }
         }
-https://hackmd.io/2-PLtiVHT3iyoSnLxxewMw
+
         if(full_grid){
             pair < int , int > scores = calc_score(grid);
             ret = scores.first - scores.second;

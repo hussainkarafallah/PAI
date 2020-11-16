@@ -142,9 +142,12 @@ def process_query(sentence , index , svd):
 
 def start_shell(index, svd):
 
-    print("Start writing sentences to search for, write `quit!` to terminate")
     global_tokens_count = len(tokens_index)
     print("Number of global tokens :: " , global_tokens_count)
+    print('')
+    print("Start writing sentences to search for, write `quit!` to terminate")
+    print("Write your first query")
+
     while True:
         sentence = input()
         if sentence == "quit!":

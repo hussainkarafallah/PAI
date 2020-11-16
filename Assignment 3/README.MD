@@ -40,3 +40,11 @@ Building AnnoyIndex as suggested in the hw description. Didn't dive into much de
 * Get the corresponding frequency doc/vector
 * Embed the vector using SVD
 * Call the annoy-index api and get the relevant results
+
+# Babel Echo
+
+## General Notes:
+* Basically you could just run the code
+* You may need to wait few seconds after seeing the statement `start recording` because it seems like the python interpreter takes few seconds to setup the socket (or connection not sure) then you could start recording
+* I added the credentials file
+* I submitted the video to moodle

@@ -54,6 +54,7 @@ class my_0_iq_nlp:
             # look for adjective modifier or compounds which describe subject
             if (token.dep_ == 'compound' or token.dep_ == 'amod') and token.head == subject:
                 self.add_property(subject.lower_ , token.lower_)
+
         return subject
 
     def get_object(self , doc , root):
@@ -194,8 +195,6 @@ class my_0_iq_nlp:
 
         if objtok and object.pos_ == 'PRON':
             return self.subject_verb_object[subject.lower_][root.lemma_]
-
-        print("@@@@" , objtok)
 
         return "unknown"
 

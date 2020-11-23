@@ -23,18 +23,6 @@ def frame_capture(path):
 
     return colored, gray
 
-def save_video(frames, vinfo, output_path):
-    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
-    out = cv2.VideoWriter(output_path, fourcc, vinfo[2], (int(vinfo[0]), int(vinfo[1])))
-
-    if not out.isOpened():
-        raise IOError(f'Could not open or create the file {output_path}')
-
-    for frame in frames:
-        out.write(frame)
-
-    out.release()
-
 def process(colored , gray):
     output_frames = []
     L = len(colored)
